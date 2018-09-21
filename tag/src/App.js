@@ -1,23 +1,12 @@
-import React, { Fragment } from "react";
+import React from "react";
+
+import Container from "./objects/Container";
 
 const App = () => (
-  <Fragment>
+  <Container>
     <h1>Olás</h1>
     <h2>Foi</h2>
-  </Fragment>
+  </Container>
 );
-
-// const App = () => {
-//   return (
-//     <Fragment>
-//       <h1>Olás</h1>
-//       <h2>Foi</h2>
-//     </Fragment>
-//   );
-// };
-
-// const App = function() {
-//   return <h1>olá</h1>;
-// };
 
 export default App;
