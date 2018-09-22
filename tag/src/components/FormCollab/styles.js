@@ -74,17 +74,20 @@ export const WrapTag = styled.span`
   transition: opacity 200ms linear;
 `;
 
-export const TagInput = styled.input`
-  display: none;
-`;
-
-export const Tag = styled.label`
+export const Tag = styled.label.attrs({ active: props => props.active })`
   display: inline-block;
   font-size: 18px;
   background-color: var(--color-second-light);
   padding: 8px;
   cursor: pointer;
   animation: vibrationNotChecked 300ms linear;
+
+  ${props =>
+    props.active &&
+    `
+      background-color: var(--color-first);
+      color: var(--color-zero);
+  `};
 
   &::selection {
     background-color: transparent;
