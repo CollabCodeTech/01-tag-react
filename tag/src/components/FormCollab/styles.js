@@ -47,3 +47,72 @@ export const Subtitle = styled.span`
   font-weight: bold;
   margin-bottom: var(--spacing-medium);
 `;
+
+export const Input = styled.input`
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid var(--color-second);
+  background-color: transparent;
+  height: 2em;
+  font-weight: bold;
+
+  &::selection {
+    background-color: var(--color-first);
+    color: var(--color-zero);
+  }
+
+  &:focus,
+  &:hover {
+    border-bottom-color: var(--color-first);
+  }
+`;
+
+export const WrapTag = styled.span`
+  position: relative;
+  margin-right: 10px;
+
+  transition: opacity 200ms linear;
+`;
+
+export const TagInput = styled.input`
+  display: none;
+`;
+
+export const Tag = styled.label`
+  display: inline-block;
+  font-size: 18px;
+  background-color: var(--color-second-light);
+  padding: 8px;
+  cursor: pointer;
+  animation: vibrationNotChecked 300ms linear;
+
+  &::selection {
+    background-color: transparent;
+  }
+`;
+
+export const Remove = styled.span`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 22px;
+  text-align: center;
+  background: var(--color-second);
+  color: var(--color-zero);
+  transform: translateY(-50%);
+  font-size: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 100ms linear;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-50%) scale(1.2);
+  }
+
+  &::selection {
+    background-color: transparent;
+  }
+`;
